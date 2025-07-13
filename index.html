@@ -190,3 +190,63 @@
     <li>Revisión médico quirúrgica IV</li>
   </ul>
 </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla Curricular 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Malla Curricular 2024 - Medicina Humana</h1>
+
+    <div class="tabs">
+        <button class="active" onclick="showTab('I CICLO')">I CICLO</button>
+        <button onclick="showTab('II CICLO')">II CICLO</button>
+        <button onclick="showTab('III CICLO')">III CICLO</button>
+        <button onclick="showTab('IV CICLO')">IV CICLO</button>
+        <button onclick="showTab('V CICLO')">V CICLO</button>
+        <button onclick="showTab('VI CICLO')">VI CICLO</button>
+        <button onclick="showTab('VII CICLO')">VII CICLO</button>
+        <button onclick="showTab('VIII CICLO')">VIII CICLO</button>
+        <button onclick="showTab('IX CICLO')">IX CICLO</button>
+        <button onclick="showTab('X CICLO')">X CICLO</button>
+        <button onclick="showTab('XI CICLO')">XI CICLO</button>
+        <button onclick="showTab('XII CICLO')">XII CICLO</button>
+        <button onclick="showTab('XIII CICLO')">XIII CICLO</button>
+        <button onclick="showTab('XIV CICLO')">XIV CICLO</button>
+    </div>
+
+    <!-- Aquí se insertan los bloques de contenido por ciclo -->
+    <div id="I CICLO" class="tab-content active">
+        <h2>I CICLO (26 créditos)</h2>
+        <ul>
+            <li>Capacidades comunicativas</li>
+            <li>Estilo de vida saludable</li>
+            <li>Formación y desarrollo integral I</li>
+            <li>Cultura física I</li>
+            <li>Educación para la vida I</li>
+            <li>Liderazgo y desarrollo personal</li>
+            <li>Métodos de aprendizaje</li>
+            <li>Base de la conducta humana</li>
+            <li>Química</li>
+            <li>Biología y bioquímica celular</li>
+            <li>Señalización celular</li>
+        </ul>
+    </div>
+
+    <!-- Repite este bloque para cada ciclo (II al XIV) -->
+
+    <script>
+        function showTab(cycleId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            var buttons = document.querySelectorAll('.tabs button');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(cycleId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
