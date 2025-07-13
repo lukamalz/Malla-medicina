@@ -1,77 +1,22 @@
-body {
-    background-color: white;
-    font-family: 'Century Gothic', sans-serif;
-    margin: 30px;
-    color: #333;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const courseItems = document.querySelectorAll("ul li");
+    const summaryDiv = document.createElement("div");
+    summaryDiv.id = "summary";
+    document.body.appendChild(summaryDiv);
 
-h1, h2 {
-    font-weight: bold;
-    color: #007BFF;
-    margin-bottom: 10px;
-}
+    function updateSummary() {
+        const total = courseItems.length;
+        const completed = document.querySelectorAll("ul li.completed").length;
+        const remaining = total - completed;
+        summaryDiv.innerHTML = `Resumen: Cursos realizados: ${completed} | Por realizar: ${remaining}`;
+    }
 
-.tabs {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
+    courseItems.forEach(item => {
+        item.addEventListener("click", function () {
+            item.classList.toggle("completed");
+            updateSummary();
+        });
+    });
 
-.tabs button {
-    background-color: #e6f2ff;
-    border: 1px solid #007BFF;
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #007BFF;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.tabs button.active {
-    background-color: #007BFF;
-    color: white;
-}
-
-.tab-content {
-    display: none;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-bottom: 30px;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #cceeff;
-    border: 1px solid #99ccff;
-    padding: 12px 15px;
-    margin: 8px 0;
-    border-radius: 6px;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-ul li.completed {
-    background-color: #66cc66 !important;
-    color: white;
-    text-decoration: line-through;
-}
-
-#summary {
-    margin-top: 30px;
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #007BFF;
-}
+    updateSummary();
+});
