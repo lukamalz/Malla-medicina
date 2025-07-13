@@ -258,4 +258,22 @@
     </script>
     <script src="script.js"></script>
 </body>
+  <input type="text" id="campoTexto" placeholder="Escribe algo...">
+
+<script>
+  const campo = document.getElementById("campoTexto");
+
+  // Cargar progreso al abrir la página
+  window.addEventListener("load", () => {
+    const guardado = localStorage.getItem("progreso");
+    if (guardado) {
+      campo.value = guardado;
+    }
+  });
+
+  // Guardar automáticamente cada vez que se escribe algo
+  campo.addEventListener("input", () => {
+    localStorage.setItem("progreso", campo.value);
+  });
+</script>
 </html>
