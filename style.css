@@ -1,34 +1,29 @@
 body {
-  font-family: Arial;
-  margin: 30px;
-  background: #f4f4f4;
+    background-color: white;
+    font-family: 'Century Gothic', sans-serif;
+    margin: 20px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
+h1, h2 {
+    font-weight: bold;
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-select {
-  padding: 5px;
+ul li {
+    background-color: #cceeff;
+    border: 1px solid #99ccff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.aprobada {
-  background-color: #c8e6c9;
-}
-.reprobada {
-  background-color: #ffcdd2;
-}
-.cursando {
-  background-color: #bbdefb;
-}
-.porcursar {
-  background-color: #eeeeee;
+ul li.completed {
+    background-color: #66cc66 !important;
+    color: white;
+    text-decoration: line-through;
 }
