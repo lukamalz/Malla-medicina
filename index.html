@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Medicina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Curricular Medicina</h1>
+  <table id="malla">
+    <thead>
+      <tr>
+        <th>Ciclo</th>
+        <th>Asignatura</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>I</td>
+        <td>Capacidades Comunicativas</td>
+        <td>General</td>
+        <td>
+          <select onchange="cambiarColor(this)">
+            <option value="Por cursar">Por cursar</option>
+            <option value="Cursando">Cursando</option>
+            <option value="Aprobada">Aprobada</option>
+            <option value="Reprobada">Reprobada</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>
