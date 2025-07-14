@@ -254,14 +254,14 @@
     <!-- Repite este bloque para cada ciclo (II al XIV) -->
 
     <script>
-        function showTab(cycleId) {
-            var tabs = document.querySelectorAll('.tab-content');
-            var buttons = document.querySelectorAll('.tabs button');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            buttons.forEach(btn => btn.classList.remove('active'));
-            document.getElementById(cycleId).classList.add('active');
-            event.target.classList.add('active');
-        }
+  function showTab(cycleId) {
+    var tabs = document.querySelectorAll('.tab-content');
+    var buttons = document.querySelectorAll('.tabs button');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+    document.getElementById(cycleId).classList.add('active');
+    event.target.classList.add('active');
+  }
     </script>
     <script src="script.js"></script>
 </body>
